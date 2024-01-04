@@ -6,11 +6,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.send('hello');
 })
-//Recurso hiper brabo
-app.post('/', (req, res) => {
-    res.status(201).json({
-        message: 'created'
-    })
+app.get('/:id', (req, res) => {
+    res.send(req.params.id);
 })
 
 app.listen(3000, () => {
