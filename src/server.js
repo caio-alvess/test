@@ -17,6 +17,12 @@ app.delete('/', (req, res) => {
     })
 })
 
+app.put('/', (req, res) => {
+    res.status(200).json({
+        status: 'okaay'
+    })
+})
+
 app.listen(3000, () => {
     console.log('running')
 });
